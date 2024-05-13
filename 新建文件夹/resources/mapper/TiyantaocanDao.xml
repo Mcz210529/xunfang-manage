@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.TiyantaocanDao">
+
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.TiyantaocanVO" >
+		SELECT * FROM tiyantaocan  tiyantaocan         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.TiyantaocanVO" >
+		SELECT  tiyantaocan.* FROM tiyantaocan  tiyantaocan 	
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.TiyantaocanView" >
+
+		SELECT  tiyantaocan.* FROM tiyantaocan  tiyantaocan 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.TiyantaocanView" >
+		SELECT * FROM tiyantaocan  tiyantaocan <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+</mapper>
